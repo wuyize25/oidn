@@ -48,6 +48,8 @@ if(OIDN_DEVICE_CUDA)
     BINARY_DIR cuda/build
     STAMP_DIR cuda/stamp
     LIST_SEPARATOR |
+    CMAKE_ARGS
+      -DCMAKE_CUDA_FLAGS:STRING=${CMAKE_CUDA_FLAGS}
     CMAKE_CACHE_ARGS
       -DCMAKE_PREFIX_PATH:STRING=${_prefix_path_str}
       -DCMAKE_CXX_COMPILER:FILEPATH=${_host_compiler}
